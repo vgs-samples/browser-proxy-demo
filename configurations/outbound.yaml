@@ -1,0 +1,50 @@
+data:
+  - attributes:
+      created_at: '2020-07-31T23:29:16'
+      destination_override_endpoint: '*'
+      entries:
+        - classifiers: {}
+          config:
+            condition: AND
+            rules:
+              - condition: null
+                expression:
+                  field: PathInfo
+                  operator: matches
+                  type: string
+                  values:
+                    - /
+              - condition: null
+                expression:
+                  field: ContentType
+                  operator: equals
+                  type: string
+                  values:
+                    - application/x-www-form-urlencoded
+          id: 998e91eb-d03c-4b36-9b6b-3dea0d1b316a
+          id_selector: null
+          operation: ENRICH
+          operations: null
+          phase: REQUEST
+          public_token_generator: UUID
+          targets:
+            - body
+          token_manager: PERSISTENT
+          transformer: FORM_FIELD
+          transformer_config:
+            - secret
+          transformer_config_map: null
+          type: null
+      host_endpoint: vgs-browser-proxy-demo.herokuapp.com
+      id: 0239be55-c353-46f1-8abb-2ceb8a1fe629
+      ordinal: null
+      port: 80
+      protocol: http
+      source_endpoint: '*'
+      tags:
+        name: slate-grey-triangle
+        source: RouteContainer
+      updated_at: '2020-07-31T23:29:16'
+    id: 0239be55-c353-46f1-8abb-2ceb8a1fe629
+    type: rule_chain
+version: 1
